@@ -47,13 +47,15 @@ const center = computed((): { x: number, y: number } => {
     };
 })
 
+const names = props.name.split(',')
+
 </script>
 
 <template lang="pug">
 g.pie
     path.main(:d="`M ${innerStop.x} ${innerStop.y} L ${outerStop.x} ${outerStop.y} A ${outerR} ${outerR} 0 0 1 ${outerStart.x} ${outerStart.y} L ${innerStart.x} ${innerStart.y} A ${innerR} ${innerR} 1 0 0 ${innerStop.x} ${innerStop.y} `" fill="pink" stroke="grey" stroke-width="2")
     //g(style="`transform: translate(0,  0.5rem);`")
-    text.name(v-text="props.name" :x="center.x" :y="center.y" :style="`transform-origin: ${center.x}px ${center.y}px;`")
+    text.name(v-for="(name, $index) in names" v-text="name" :x="center.x" :y="center.y + $index * 16" :style="`transform-origin: ${center.x}px ${center.y}px;`")
 </template>
 
 <style scoped lang="less">

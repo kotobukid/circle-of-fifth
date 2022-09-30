@@ -15,7 +15,7 @@ svg(width="640" height="500" viewBox="-320 -250 640 500")
 import ArcRing from './ArcRing.vue';
 
 const names_major = ['C', 'G', 'D', 'A', 'E', 'B', 'G♭/F#', 'D♭', 'A♭', 'E♭', 'B♭', 'F'];
-const names_minor = ['Am', 'Em', 'Bm', 'F#m', 'C#m', 'G#m', 'E♭m/D#m', 'B♭m', 'Fm', 'Cm', 'Gm', 'Dm'];
+const names_minor = ['Am', 'Em', 'Bm', 'F#m', 'C#m', 'G#m', 'E♭m,/D#m', 'B♭m', 'Fm', 'Cm', 'Gm', 'Dm'];
 
 </script>
 
